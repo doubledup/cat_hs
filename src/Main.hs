@@ -21,7 +21,7 @@ main = do
       handler
       where
         handler :: SomeException -> IO ()
-        handler _ = putStrLn $ "cat: " ++ filename ++ ": No such file or directory"
+        handler _ = putStr $ "cat: " ++ filename ++ ": No such file or directory"
     Nothing -> do
       _ <- mapM (\_ -> do
           l <- getLine
